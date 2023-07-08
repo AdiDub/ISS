@@ -1,0 +1,19 @@
+package Final;
+
+public class Parent {
+    public final void display() {
+        System.out.println("Parent class");
+    }
+}
+
+public class Child extends Parent {
+    // Attempting to override a final method will result in a compilation error
+    // public void display() { }
+}
+
+public class FinalMethod {
+    public static void main(String[] args) {
+        Child child = new Child();
+        child.display();
+    }
+}

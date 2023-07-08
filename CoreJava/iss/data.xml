@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<employees>
+    <employee>
+        <name>John Doe</name>
+        <age>30</age>
+    </employee>
+    <employee>
+        <name>Jane Smith</name>
+        <age>28</age>
+    </employee>
+    <employee>
+        <name>Michael Johnson</name>
+        <age>35</age>
+    </employee>
+</employees>
