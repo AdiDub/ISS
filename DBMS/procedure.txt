@@ -1,0 +1,33 @@
+-- Create a stored procedure that retrieves customer details based on the provided customer ID
+CREATE PROCEDURE getCustomerDetails (IN customerId INT)
+BEGIN
+    SELECT * FROM Customers WHERE CustomerID = customerId;
+END;
+
+-- Callable statement in java using the procedure
+
+// Prepare the Callable Statement
+String sql = "{call getCustomerDetails(?)}";
+CallableStatement callableStatement = connection.prepareCall(sql);
+
+// Set input parameters
+int customerId = 1;
+callableStatement.setInt(1, customerId);
+
+// Execute the stored procedure
+ResultSet resultSet = callableStatement.executeQuery();
+
+// Process the result set
+while (resultSet.next()) {
+    // Retrieve the customer details
+    int customerID = resultSet.getInt("CustomerID");
+    String firstName = resultSet.getString("FirstName");
+    String lastName = resultSet.getString("LastName");
+    
+    // Process the retrieved data
+    // ...
+}
+
+// Close the statement and result set
+resultSet.close();
+callableStatement.close();

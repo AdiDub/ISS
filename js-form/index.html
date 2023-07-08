@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Custom T-shirts</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body >
+    <header>
+        <h1 class="heading">
+            Best in the business
+        </h1>
+    </header>
+    <main class="container">
+        <div class="sub">
+            <table>
+                <tr>
+                    <td>
+                        <img src="Images/size.jpg" alt="size-chart" class="chart">
+                    </td>
+                    <td id="desc">
+                        <div class="ddd">
+                            <h2>Custom T-Shirts</h2>
+                            <p>Design a unisex round-neck casual t-shirt for you or your friends</p>
+                            <ul>
+                                <li>Best quality premium material</li>
+                                <li>Free Shipping all over the world</li>
+                                <li>Get the t shirt that you always desired</li>
+                                <li>Let the t shirt speak for you</li>
+                                <li>Order from just 1 t-shirt!</li>
+                            </ul>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <hr>
+        <div class="heading">
+            <p class="sub-head">Design Information</p>
+        </div>
+        <hr>
+        <div class="design">
+            <form
+            name="myForm"
+            id="shirt_cart"
+            onsubmit="return validateForm()"
+            enctype="multipart/form-data"
+            method="put"
+        >
+            <h3>Your Cart</h3>
+            <div class="cart" >
+                <div class="form-data">
+                    <label for="tagline">Enter Tagline:</label>
+                    <input required type="text" name="tagline" id="tagline" />
+                    <br />
+                    <label for="color">Choose Color:</label>
+                    <input type="color" name="color" > 
+                    <br />
+
+                    <label for="size">Select Size:</label>
+                    <select required id="size" name="size">
+                        <option value="S">S</option>
+                        <option value="M">M</option>
+                        <option value="L">L</option>
+                        <option value="XL">XL</option>
+                    </select>
+                    <br />
+                    <label for="quantity">Quantity: </label>
+                    <input type="number" value="1" name="number">
+                    <br />
+                    <label for="price"
+                        >Total Order Price: <strong>Rs. 666</strong></label
+                    >
+                    <br />
+
+                    <div class="mt-1"></div>
+                    <label for="payment_options">Payment Options:</label>
+                    <br />
+                    <div class="options">
+                        <input
+                            type="radio"
+                            id="cod"
+                            name="payment"
+                            value="Cash on delivery"
+                        />
+                        <label for="cc">Cash on Delivery(COD)</label> <br />
+                        <input
+                            type="radio"
+                            id="upi"
+                            name="payment"
+                            value="UPI"
+                        />
+                        <label for="upi">UPI/GPay/Paytm</label> <br />
+                        <input
+                            type="radio"
+                            id="cc"
+                            name="payment"
+                            value="Credit/Debit Card"
+                        />
+                        <label for="crypto">Credit/Debit Card</label>
+                    </div>
+                    <div>
+                        <label for="Date">Date to be delivered:</label>
+                        <input type="date" name="date"  >
+                    </div>
+                </div>
+                <div class="preview">
+                    <img src="Images/size.jpg" alt="" />
+                </div>
+            </div>
+        </form>
+        </div>
+        <hr>
+        <div class="sub-head" align=center>
+            <p>Personal Information</p>
+        </div>
+        <hr>
+        <form action="">
+            <table cellpadding=8 cellspacing=4 border="0" align="center">
+                <tr>
+                    <td><label for="name">
+                            <p>Name:</p>
+                    </label>
+                </td>
+                <td>
+                    <input type="text" name="name" placeholder="your name" id="name">
+                </td>
+                </tr>
+                <tr>
+                    <td><label for="email">
+                            <p>Email:</p>
+                        </label>
+                    </td>
+                    <td>
+                         <input type="text" name="email" placeholder="abc123@gmail.com" id="email">
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="mob">
+                            <p>Mobile No:</p>
+                        </label>
+                    </td>
+                    <td>
+                         <input type="tel" name="mob" placeholder="123-456-789" id="mobile">
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="city">
+                            <p>City:</p>
+                        </label>
+                    </td>
+                    <td>
+                         <input type="text" name="city" placeholder="eg. Mumbai" id="city">
+                    </td>
+                </tr>                
+                <tr>
+                    <td><label for="pincode">
+                            <p>Pin code:</p>
+                        </label>
+                    </td>
+                    <td>
+                         <input type="text" name="pincode" placeholder="eg.400072" id="pincode">
+                    </td>
+                </tr>    
+                <tr>
+                    <td><label for="Address">
+                            <p>Address:</p>
+                        </label>
+                    </td>
+                    <td>
+                         <textarea name="Address" id="address" cols="22" rows="1" ></textarea>
+                    </td>
+                </tr> 
+                <tr>
+                    <td colspan="2" align="center">
+                        <button type="submit" class="btn">Place Order</button>
+                    </td>
+                </tr>     
+                <tr>
+                    <td>
+                        <label for="likely">How likely would you suggest this site to a friend?</label>
+                    </td>
+                    <td>
+                        <input type="range" name="range" id="">
+                    </td>
+                </tr>
+            </table>
+            <hr>
+        </form>
+    </main>
+    <footer>
+        <div class="image"  align='center' >
+            <h1 class="sub-head"> Some demo products</h1>
+            <span><img src="Images/download.jpeg" alt="T-shirt" width="250px"></span>
+            <span><img src="Images/download (1).jpeg" alt="T-shirt" width="250px"></span>
+            <span><img src="Images/download (2).jpeg" alt="T-shirt" width="250px"></span>
+        </div>
+    </footer>
+    </div>
+</body>
+<script src='./app.js'></script>
+</html>
